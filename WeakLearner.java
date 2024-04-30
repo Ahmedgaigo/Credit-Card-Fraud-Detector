@@ -69,7 +69,7 @@ public class WeakLearner {
         int optimalSignPredictor = -1; // holds the optimal sign predictor
         double maxWeight = 0.0;
 
-        // sort inputs based on dimensions
+        // sort inputs based on dimensions value
         for (int dp = 0; dp < k; dp++) {
             List<Triple> sortedInput = new ArrayList<>(); // holds sorted inputs
             for (int i = 0; i < size; i++) {
@@ -105,7 +105,6 @@ public class WeakLearner {
 
     // return the prediction of the learner for a new sample
     public int predict(int[] sample) {
-        int decision = 1;
         if (sample == null || sample.length != input[0].length)
             throw new IllegalArgumentException("argument is null or its length"
                                                        + "is incompatible with "
